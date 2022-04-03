@@ -1,0 +1,72 @@
+doctype html
+html
+	head
+		title
+			| #{title}
+		meta(content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport')
+		link(href='https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap' rel='stylesheet')
+		link(rel='icon' type='image/png' href='/adminlte/template/images/icons/favicon.ico')
+		link(rel='stylesheet' type='text/css' href='/adminlte/template/vendor/bootstrap/css/bootstrap.min.css')
+		link(rel='stylesheet' type='text/css' href='/adminlte/template/fonts/font-awesome-4.7.0/css/font-awesome.min.css')
+		link(rel='stylesheet' type='text/css' href='/adminlte/template/fonts/Linearicons-Free-v1.0.0/icon-font.min.css')
+		link(rel='stylesheet' type='text/css' href='/adminlte/template/vendor/animate/animate.css')
+		link(rel='stylesheet' type='text/css' href='/adminlte/template/vendor/css-hamburgers/hamburgers.min.css')
+		link(rel='stylesheet' type='text/css' href='/adminlte/template/vendor/animsition/css/animsition.min.css')
+		link(rel='stylesheet' type='text/css' href='/adminlte/template/vendor/select2/select2.min.css')
+		link(rel='stylesheet' type='text/css' href='/adminlte/template/vendor/daterangepicker/daterangepicker.css')
+		link(rel='stylesheet' type='text/css' href='/adminlte/template/css/util.css')
+		link(rel='stylesheet' type='text/css' href='/adminlte/template/css/main.css')
+		link(rel='stylesheet' href='/font-awesome/css/font-awesome.css')
+		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css')
+		link(rel='stylesheet' href='/adminlte/dist/css/AdminLTE.min.css')
+		link(rel='stylesheet' href='/adminlte/plugins/iCheck/square/blue.css')
+body(style='background-color: #666666;')
+	.limiter
+		.container-login100
+			.wrap-login100
+				form.login100-form.validate-form(action='/login/' method='post')
+					span.login100-form-title.p-b-43
+						| Sign In
+						- if (messages.msg_error) 
+							.alert.alert-danger.alert-dismissable 
+								button.close(type='button' data-dismiss='alert' aria-hidden='true') 
+									| ×
+								h5
+									i.icon.fa.fa-ban
+									| Alert! 
+								| !{messages.msg_error}
+						- if  (messages.msg_info)
+							.alert.alert-success.alert-dismissable
+								button.close(type='button' data-dismiss='alert' aria-hidden='true')
+									| ×
+								h5
+									i.icon.fa.fa-check
+									| Success!
+								| !{messages.msg_info}
+					.wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+						input.input100(type="email" placeholder="Email" name="txtEmail")
+						span.focus-input100
+					.wrap-input100.validate-input(data-validate='Password is required')
+						input.input100(type="password" placeholder="Password" name="txtPassword")
+						span.focus-input100
+					.flex-sb-m.w-full.p-t-3.p-b-32
+						.contact100-form-checkbox
+							input#ckb1.input-checkbox100(type='checkbox' name='remember-me')
+							label.label-checkbox100(for='ckb1')
+								| Remember me
+						div
+							a.txt1(href='#')
+								| Forgot Password?
+					.container-login100-form-btn
+						button.login100-form-btn
+							| Login
+					.text-center.p-t-46.p-b-20
+						span.txt2
+							a.txt1(href='/register') or Sign Up 
+				.login100-more(style="background-image: url('/adminlte/template/images/bg_01.jpeg');")
+
+script(type='text/javascript' src='/adminlte/plugins/jQuery/jquery-2.2.3.min.js')
+script(type='text/javascript' src='/adminlte/bootstrap/js/bootstrap.min.js')
+script(type='text/javascript' src='/adminlte/plugins/iCheck/icheck.min.js')
+script(type='text/javascript' src='/adminlte/dist/js/login.js')
