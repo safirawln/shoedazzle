@@ -48,7 +48,7 @@ app.use(
         user: 'root', // your mysql user
         password : '', // your mysql password
         port : 3306, //port mysql
-        database:'mydb' // your database name
+        database:'localhost' // your database name
     },'pool') //or single
 );
 app.use('/', index);
